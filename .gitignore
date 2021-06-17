@@ -1,0 +1,15 @@
+\.idea
+**\.git
+**\.idea
+*.log
+
+
+\.DS_Store
+
+# exclude target dirs
+dist/
+out/
+target/
+
+# exclude vendor
+vendor/
