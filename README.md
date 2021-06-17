@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="env Logo" src="./readme/header.png" width="600px"></img>
+  <img alt="env Logo" src="./readme/header.png" width="auto"></img>
 </p>
 
 <p align="center">
