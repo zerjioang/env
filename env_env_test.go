@@ -33,5 +33,5 @@ func ExampleVariables() {
 	env := Variables()
 	val := env.GetInt64("MY_INT64_VALUE", 20)
 	fmt.Println("val:", val)
-	// Output: 20
+	// Output: val: 20
 }
