@@ -10,6 +10,7 @@ package env // github.com/zerjioang/env
 
 import (
 	"strconv"
+	"strings"
 )
 
 // Create our environment based configuration
