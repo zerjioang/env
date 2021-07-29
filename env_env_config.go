@@ -58,6 +58,12 @@ func (c *Config) GetBool(key string, fallback bool) bool {
 	if val == "" {
 		return fallback
 	}
+	return IsTrue(val)
+}
+
+// IsTrue returns true boolean value when input string contains
+// a positive string such as yes, enable, enabled, 1, true, on
+func IsTrue(val string) bool {
 	val = strings.ToLower(val)
 	return val == "yes" ||
 		val == "on" ||
