@@ -52,6 +52,22 @@ func (c *Config) GetString(key string, fallback string) string {
 	return fallback
 }
 
+// GetBool Returns a environment variable as boolean by its key
+func (c *Config) GetBool(key string, fallback bool) bool {
+	val := c.GetString(key, "")
+	if val == "" {
+		return fallback
+	}
+	val = strings.ToLower(val)
+	return val == "yes" ||
+		val == "on" ||
+		val == "enable" ||
+		val == "enabled" ||
+		val == "active" ||
+		val == "1" ||
+		val == "true"
+}
+
 // Get Returns a environment variable as interface{} by its key
 func (c *Config) Get(key string) interface{} {
 	v, ok := (*c)[key]
